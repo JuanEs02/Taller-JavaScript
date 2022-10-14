@@ -32,4 +32,3 @@ function Autos() {
     document.writeln("<br>" + "Azules: " + contador5 + "\n");
     document.writeln("<br>" + "Total de autos: " + contador);
 }
-
