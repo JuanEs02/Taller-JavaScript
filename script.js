@@ -311,3 +311,42 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 
 }
+/*
+function primos() {
+
+    let num = 0;
+    let contador = 0;
+    let sumatoria = [];
+    let primos = [];
+    while (true) {
+        num = parseInt(prompt("Ingrese un numero entero"))
+        if (num > 0) {
+            for (let i = 2; i <= num; i++) {
+                let cont = 2;
+                let prime = true;
+                while (prime && cont < i) {
+                    if (i % cont == 0) {
+                        prime = false;
+                    } else {
+                        cont++;
+                    }
+                }
+                if (prime) {
+                    primos[i];
+                }
+            }
+            for (let i = 0; i < num; i++) {
+                sumatoria[i] = Math.pow((i + 1), num);
+                document.write((i + 1) + "^" + num + " = " + sumatoria[i] + "<br>");
+                contador = contador + sumatoria[i];
+            }
+            { break; }
+        } else {
+
+            document.write("Numero invalido, vuelva a digitar un numero")
+        }
+    }
+    document.write("Los numeros primos de: " + num + " son: " + i)
+    document.write("<br>" + "La sumatoria del numero " + num + " es: " + contador);
+}
+*/
