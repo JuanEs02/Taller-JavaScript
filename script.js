@@ -266,3 +266,48 @@ function teatro() {
     document.writeln("-----------------------------------------------------")
 } // NO FUNCIONO :(
 */
+function candidatos() {
+    let ganador = 0;
+    let total = 0;
+    let candidato1 = 0;
+    let candidato2 = 1;
+    let candidato3 = 2;
+    let contador1 = 0;
+    let contador2 = 0;
+    let contador3 = 0;
+    for (let x = 0; x <= 49999; x++) {
+        let votos = getRandomInt(3);
+        if (votos == candidato1) {
+            contador1++;
+        } else if (votos == candidato2) {
+            contador2++;
+        } else if (votos == candidato3) {
+            contador3++;
+        }
+    }
+    total = contador1 + contador2 + contador3;
+    if (contador1 > contador2 && contador1 > contador3) {
+        ganador = candidato1 + 1;
+        document.writeln("El ganador es el candidato : #" + ganador + " con " + contador1 + " votos")
+    } else if (contador2 > contador1 && contador2 > contador3) {
+        ganador = candidato2 + 1;
+        document.writeln("El ganador es el candidato : #" + ganador + " con " + contador1 + " votos")
+    } else if (contador3 > contador1 && contador3 > contador2) {
+        ganador = candidato3 + 1;
+        document.writeln("El ganador es el candidato : #" + ganador + " con " + contador1 + " votos")
+    }
+    if (contador1 == contador2) {
+        document.writeln("<br>" + "Los candidatos #" + candidato1 + 1 + " y " + candidato2 + " quedaron empatados con: " + contador1)
+    } else if (contador1 == contador3) {
+        document.writeln("<br>" + "Los candidatos #" + candidato1 + 1 +" y " + candidato3 + " quedaron empatados con: " + contador1)
+    } else if (contador2 == contador3) {
+        document.writeln("<br>" + "Los candidatos #" + candidato2 + 1 +" y " + candidato3 + " quedaron empatados con: " + contador2)
+    } else if (contador1 == contador2 == contador3){
+        document.writeln("<br>" + "Los candidatos #" + candidato1 + 1 +", "+ candidato2 + 1 + "y " + candidato3 + 1 + " quedaron empatados con: " + contador2)
+    }
+    document.writeln("<br>" + "El total de votos fue: " + total + " votos")
+}
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+
+}
