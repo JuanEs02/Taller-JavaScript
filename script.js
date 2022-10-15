@@ -182,3 +182,47 @@ function supermercado() {
     document.writeln("El total a pagar por los productos es: $" + total)
 
 }
+function teatro() {
+
+    let edad = 0;
+    let respuesta = "";
+    let precio = 0;
+    let descuento = 0;
+    let categoria1 = 0;
+    let categoria2 = 0;
+    let categoria3 = 0;
+    let categoria4 = 0;
+    let categoria5 = 0;
+    let total = 0;
+    precio = parseFloat(prompt("Ingresa el precio del boleto"))
+    do {
+        edad = prompt("Ingrese la edad")
+        if (edad < 5) {
+            document.writeln("No se permiten menores de 5 años.")
+        } else if (edad <= 14) {
+            descuento = precio * 0.35;
+            categoria1 = categoria1 + descuento;
+        } else if (edad <= 19) {
+            descuento = precio * 0.25;
+            categoria2 = categoria2 + descuento;
+        } else if (edad <= 45) {
+            descuento = precio * 0.10;
+            categoria3 = categoria3 + descuento;
+        } else if (edad <= 65) {
+            descuento = precio * 0.25;
+            categoria4 = categoria4 + descuento;
+        } else {
+            descuento = precio * 0.35
+            categoria5 = categoria5 + descuento;
+        }
+        document.writeln("<br>" + "El descuento aplicado para los " + edad + " años es: $" + descuento)
+        total = total + descuento;
+        respuesta = prompt("Desea continuar? (SI/NO)")
+    } while (respuesta == "si" || respuesta == "SI" || respuesta == "Si" || respuesta == "sI")
+    document.writeln("<br>" + "El descuento total en la categoria 1 es de: $" + categoria1)
+    document.writeln("<br>" + "El descuento total en la categoria 2 es de: $" + categoria2)
+    document.writeln("<br>" + "El descuento total en la categoria 3 es de: $" + categoria3)
+    document.writeln("<br>" + "El descuento total en la categoria 4 es de: $" + categoria4)
+    document.writeln("<br>" + "El descuento total en la categoria 5 es de: $" + categoria5)
+    document.writeln("<br>" + "El descuento total: $" + total)
+}
