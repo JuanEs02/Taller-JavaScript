@@ -166,3 +166,19 @@ function obesidad() {
         document.write(" ")
     }
 }
+function supermercado() {
+
+    let cantidad = 0;
+    let total = 0;
+    let precio = 0;
+    cantidad = parseInt(prompt("Ingrese la cantidad total de articulos"))
+
+    for (let x = 0; x < cantidad; x++) {
+
+        precio = parseInt(prompt("Ingrese el precio del articulo #" + (x + 1)))
+        total = total + (cantidad * precio);
+    }
+
+    document.writeln("El total a pagar por los productos es: $" + total)
+
+}
