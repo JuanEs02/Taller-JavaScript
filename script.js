@@ -141,3 +141,28 @@ function menor() {
     }
     document.write("El número menor es: " + menor)
 }
+function obesidad() {
+
+    let peso_anterior;
+    let peso = 0;
+    let suma = 0;
+
+    for (let x = 1; x <= 5; x++) {
+        peso_anterior = parseInt(prompt("Persona #" + x + "\nIngresa el peso anterior"))
+
+        for (let a = 1; a <= 10; a++) {
+            peso = parseInt(prompt("Ingresa el peso #" + a))
+            suma = suma + peso;
+        }
+        if (suma / 10 == peso_anterior) {
+            document.writeln("La persona #" + x + " se mantiene en el peso")
+        } else {
+            if (suma / 10 > peso_anterior) {
+                document.writeln("<br>"+"La persona #" + x + " SUBIO")
+            } else {
+                document.writeln("<br>"+"La persona #" + x + " BAJO")
+            }
+        }
+        document.write(" ")
+    }
+}
