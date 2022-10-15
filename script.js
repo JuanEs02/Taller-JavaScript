@@ -124,3 +124,20 @@ function edades() {
     document.writeln("<br>"+"El promedio de edades de hombres del grupo es: " + promedio_hombres);
     document.writeln("<br>"+"El promedio de edades de mujeres del grupo es: " + promedio_mujeres);
 }
+function menor() {
+    let menor = 0;
+    let numero_nuevo = 1;
+    let cantidad_num = 0;
+    let x = 1;
+    cantidad_num = parseInt(prompt("Determinar el minimo de una cadena de numeros\n" + "\n" + "Ingrese la cantidad total de numeros:"))
+    while (x <= cantidad_num) {
+        numero_nuevo = parseInt(prompt("Ingrese un numero:"))
+        if (x == 1) {
+            menor = numero_nuevo;
+        } else if (numero_nuevo < menor) {
+            menor = numero_nuevo;
+        }
+        x++;
+    }
+    document.write("El número menor es: " + menor)
+}
