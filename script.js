@@ -386,3 +386,16 @@ function mcd() {
     document.write("El M.C.D. entre " + num1 + " y " + num2 + " es:")
     document.write("<br>" + res)
 }
+function ciudad() {
+    let c = 0;
+    let d = 0;
+    let a= 25000000.0;
+    let b = 19900000.0;
+    while (b<a){
+        a = a+(a * 0.2);
+        b = b+(b * 0.3);
+        c++;
+    }
+    d=1994+c;
+    document.writeln("La poblacion del pais B supera a la del pais A en el año: "+d)
+}
