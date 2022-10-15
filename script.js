@@ -91,3 +91,36 @@ function salario() {
         x++;
     }
 }
+function edades() {
+    let sexo = 0;
+    let alumnos = 0;
+    let x = 1;
+    let numero_hombres = 0;
+    let edad_hombres = 0;
+    let promedio_hombres = 0.0;
+    let numero_mujeres = 0;
+    let edad_mujeres= 0;
+    let promedio_mujeres = 0.0;
+    alumnos = prompt("Ingresa una cantidad de alumnos")
+    while (x <= alumnos) {
+        edad = parseInt(prompt("Ingrese la edad"))
+        sexo = prompt("Elige 1 o 2 para el sexo" + "\n1. Hombre" + "\n2. Mujer")
+        if (sexo == 1) {
+            edad_hombres = edad_hombres + edad;
+            numero_hombres++;
+            promedio_hombres = edad_hombres / numero_hombres;
+        } else if (sexo == 2) {
+            edad_mujeres = edad_mujeres + edad;
+            numero_mujeres++;
+            promedio_mujeres = edad_mujeres / numero_mujeres;
+        }
+        x++;
+    }
+
+    let suma_edades = edad_hombres + edad_mujeres;
+    let promedio = suma_edades/ alumnos;
+
+    document.write("El promedio de edades de todo el grupo es: " + promedio);
+    document.writeln("<br>"+"El promedio de edades de hombres del grupo es: " + promedio_hombres);
+    document.writeln("<br>"+"El promedio de edades de mujeres del grupo es: " + promedio_mujeres);
+}
