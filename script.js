@@ -363,3 +363,26 @@ function fibonacci() {
     }
 }
 */
+function mcd() {
+    let num1 = 0;
+    let num2 = 0;
+    let a = 0;
+    let b = 0;
+    let res = 0;
+    num1 = parseInt(prompt("Ingrese el primer numero"))
+    num2 = parseInt(prompt("Ingrese el segundo numero"))
+    if (num1 > num2) {
+        a = num1;
+        b = num2;
+    } else {
+        a = num2;
+        b = num1;
+    }
+    while (b != 0) {
+        res = b;
+        b = (a % b);
+        a = res;
+    }
+    document.write("El M.C.D. entre " + num1 + " y " + num2 + " es:")
+    document.write("<br>" + res)
+}
