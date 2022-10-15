@@ -72,3 +72,22 @@ function zoo() {
     document.writeln("<br>" + (categoria2 / total) * 100 + "% de mas de 1 año y menos de 3");
     document.writeln("<br>" + (categoria3 / total) * 100 + "% de 3 año o más");
 }
+function salario() {
+    let x = 1;
+    let n = 0;
+    let horas = 0;
+    let hora_extra = 0;
+    let ssalario = 0;
+    n = parseInt(prompt("Ingresa la cantidad de trabajadores"))
+    while (x <= n) {
+        horas = parseInt(prompt("Ingresa el número de horas trabajadas"))
+        if (horas <= 40) {
+            ssalario = horas * 20;
+        } else {
+            hora_extra = horas - 40;
+            ssalario = 40 * 20 + (hora_extra * 25);
+        }
+        document.writeln("El salario del trabajador: " + x + " es: $" + ssalario + "\n");
+        x++;
+    }
+}
