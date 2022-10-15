@@ -226,3 +226,43 @@ function teatro() {
     document.writeln("<br>" + "El descuento total en la categoria 5 es de: $" + categoria5)
     document.writeln("<br>" + "El descuento total: $" + total)
 }
+/*function kia() {
+    var vendedor = new Array(10);
+    var comision_ven = new Array(10);
+    let i = 1;
+    let nombre = "";
+    let venta = "";
+    while (i <= 3) {
+        nombre = parseInt(prompt("KIA" + "\nIngrese el nombre del vendedor:"))
+        for (let x = 0; x <= vendedor.length; x++) {
+            vendedor[x] = nombre;
+            console.log(vendedor[i])
+        }
+        venta = parseInt(prompt("Ingrese el importe total de venta"))
+        if (venta >= 100000 && 300000) {
+            comision = venta * 0.03;
+        } else if (venta >= 3000000 && venta < 5000000) {
+            comision = venta * 0.04;
+        } else if (venta >= 5000000 && venta < 7000000) {
+            comision = venta * 0.05;
+        } else if (venta >= 7000000) {
+            comision = venta * 0.06;
+        } else if (venta < 1000000) {
+            document.writeln("El vendedor no tiene comisiones")
+        }
+        i++;
+        comision_ven[comision];
+    }
+    i = 1;
+    comision_ven[comision];
+    document.writeln("")
+    document.writeln(" COMISIONES VENDEDORES ")
+    document.writeln("-----------------------------------------------------")
+    while (i <= 3) {
+        document.writeln("Nombre vendedor: " + vendedor + " Comision: " + comision_ven)
+        document.writeln("-----------------------------------------------------")
+        i++;
+    }
+    document.writeln("-----------------------------------------------------")
+} // NO FUNCIONO :(
+*/
