@@ -350,3 +350,16 @@ function primos() {
     document.write("<br>" + "La sumatoria del numero " + num + " es: " + contador);
 }
 */
+/*
+function fibonacci() {
+
+    let num2 = parseInt(prompt("Digite un numero entero positivo"))
+    let fib = [0, 1];
+    for (let i = 2; i < num2; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2]
+    }
+    for (let index = 0; index < fib.length; index++) {
+        document.write(fib[index] + "<br>")
+    }
+}
+*/
